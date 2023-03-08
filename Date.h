@@ -24,7 +24,7 @@ public:
     int getYear() const;
     void setYear(int y);
 
-    string print();
+    std::string print();
     static bool compare(const Date& d1, const Date& d2) const;
 };
 #endif
