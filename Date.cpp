@@ -31,5 +31,5 @@ bool Date::compare(const Date& d1, const Date& d2)
 {
     return (d1.getYear() < d2.getYear()) || 
            ((d1.getYear() == d2.getYear()) && (d1.getMonth() < d2.getMonth())) || 
-           ((d1.getYear() == d2.getYear()) && (d1.getMonth() == d2.getMonth()) && (d1.getDay() < d2.getDay()));
+           ((d1.getYear() == d2.getYear()) && (d1.getMonth() == d2.getMonth()) && (d1.getDay() <= d2.getDay()));
 }
