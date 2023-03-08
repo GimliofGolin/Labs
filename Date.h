@@ -5,21 +5,26 @@
 class Date
 {
 private:
-  int month, day, year;
+    int month {1};
+    int day {1};
+    int year {1900};
 
 public:
-  static std::string const MONTHS[12];
+    Date() = default;
+    Date(int m, int d, int y) : month(m), day(d), year(y) {}
 
-  int getMonth() const;
-  void setMonth(int m);
+    static std::string const MONTHS[12];
 
-  int getDay() const;
-  void setDay(int d);
+    int getMonth() const;
+    void setMonth(int m);
 
-  int getYear() const;
-  void setYear(int y);
+    int getDay() const;
+    void setDay(int d);
 
-  string print();
-  static bool compare(Date d1, Date d2) const;
+    int getYear() const;
+    void setYear(int y);
+
+    string print();
+    static bool compare(const Date d1, const Date& d2) const;
 };
 #endif
