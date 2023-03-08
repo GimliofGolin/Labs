@@ -22,7 +22,7 @@ std::string Date::print()
 {
     std::stringstream date;
 
-    date << setw(10) << left << MONTHS[month-1] << setw(3) << left << day << setw(5) << year;
+    date << std::setw(10) << std::left << MONTHS[month-1] << setw(3) << left << day << setw(5) << year;
 
     return date.str();
 }
